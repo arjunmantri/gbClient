@@ -12,8 +12,8 @@ var express = require('express')
 
 var app = express();
 
-var server_port = process.env.PORT || 3000
-var server_ip_address = process.env.IP || '127.0.0.1'
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3000
+var server_ip_address = process.env.OPENSHIFT_NODEJS_PORT_IP || '127.0.0.1'
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
